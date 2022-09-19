@@ -118,6 +118,9 @@ main {
     transition: .4s;
 
 }
+#tasks .task .content {
+    flex: 1 1 0%;
+}
 #tasks .task .content .text:not(:read-only) {
     color: var(--pink);
 }
