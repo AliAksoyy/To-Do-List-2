@@ -112,6 +112,50 @@ main {
 #tasks .task .content .text{
     color: var(--light);
     font-size: 1.125rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 100%;
+    display: block;
+    transition: .4s;
 
+}
+#tasks .task .content .text:not(:read-only) {
+    color: var(--pink);
+}
+
+#tasks .task .actions {
+    display: flex;
+    justify-content: space-between;
+    
+    /* border: 1px solid red; */
+    width: 100px;
+    margin-right: 3px;
+    padding: .3rem;
+}
+
+#tasks .task .actions button {
+    cursor: pointer;
+    margin: 0 0.5erm;
+    font-size: 1.125rem;
+    font-weight: 700;
+    transition: .4s;
+
+}
+.task .actions button:hover {
+    opacity: 0.6;
+
+}
+.task .actions button:active {
+    opacity: 0.4;
+}
+
+.task .actions .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
