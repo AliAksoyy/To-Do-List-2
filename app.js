@@ -44,6 +44,18 @@ window.addEventListener("load", () => {
     task_el.appendChild(task_actions_el);
       list_el.appendChild(task_el);
     input.value = "";
+
+    task_edit_el.addEventListener("click", ()=> {
+      if(task_edit_el.innerText.toLowerCase()==="edit") {
+         task_input_el.removeAttribute("readonly")
+         task_input_el.focus()
+         task_edit_el.innerText = "Save"
+     
+      }else {
+         task_input_el.setAttribute("readonly", "readonly")
+         task_edit_el.innerText = "edit"
+      }
+    })
   })
 
 
